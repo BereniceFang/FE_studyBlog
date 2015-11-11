@@ -22,14 +22,14 @@ JavaScript语言精粹笔记
   * for in 可能是不按顺序的枚举, 考虑顺序要用原始的for, 而且不用担心会有原型链中的属性 
 * 可以用delete运算符删除对象的某个属性,是原型链上的这个属性透现出来
 * 对象可以用来减少全局变量污染, 把全局性资源都纳入到一个名称空间里, 会降低与其他应用程序、组建之间发生冲突的可能
-  * eg:
+  
 ```js
-  var MyApp = {}
-  MyApp.a = {}
-  MyApp.b = {}
+var MyApp = {}
+MyApp.a = {}
+MyApp.b = {}
 ```
 
-###
+-------
 
 # 函数
 
@@ -79,17 +79,59 @@ JavaScript语言精粹笔记
     * 单例是用对象字面量创建的对象, 对象的属性值在该对象的生命周期中不会发生变化
 * 让方法返回this而不是undefined就可以实现级联,也就是链式调用
 * 柯里化可以把函数和传入的参数相结合产生新的函数
-  * 
-  ```js
-    function carry(fn){
-      var args = Array.prototype.slice.call(arguments, 1)
-      return function(){
-        var initArgs = Array.prototype.slice.call(arguments)
-        var finalArgs = args.concat(initArgs)
-        return fn.call(null, finalArgs)
-      }
+
+```js
+function carry(fn){
+  var args = Array.prototype.slice.call(arguments, 1)
+  return function(){
+    var initArgs = Array.prototype.slice.call(arguments)
+    var finalArgs = args.concat(initArgs)
+    return fn.call(null, finalArgs)
+  }
+}
+```
+
+* 记忆是指把先前操作的结果记录在对象里避免重复运算的优化方式
+
+```js
+var memoizer = function(memo, formula){
+  var recur = function(n){
+    var result = memo[n]
+    if(typeof result !== 'number'){
+      result =formula(recur, n)
+      memo[n] = result
     }
-  ```
+    return result
+  }
+  return recur
+}
+```
 
+-------
 
+# 继承
 
+* JS基于原型, 所以对象直接从其他对象继承
+* 通过构造器函数产生对象(使用new前缀调用)
+  * 新函数对象被赋予了prototype属性, 它的值是一个包含constructor属性且属性值是新函数的对象
+  * prototype对象事存放继承特征的地方, 每个函数都会有prototype对象
+  * 构造伪类来继承a, 可以通过定义constructor函数, 并把prototype替换为a的实例
+
+```javascript
+Function.method('inherits', function(Parent){
+  this.prototype = new Parent()
+  return this
+})
+``` 
+
+  * 弊端
+    * 没有私有环境,所有的属性都是公开的
+    * 如果调用构造函数时没有用new, this会被绑定到全局对象
+* 编写构造器时接受一个JSON格式的对象说明符,会使代码容易阅读
+* 原型式继承 `(并没有看懂原型和构造的不同, 标注下来之后再详细看)`
+* 应用模块模式解决所有属性可见, 没有私有属性的问题
+  * 构造生成对象的函数的步骤:
+    1. 构造一个对象(可以通过各种方式) 
+    2. 定义私有实例变量和方法(通过var定义的变量)
+    3. 扩充新对象的方法(可以访问到参数和第2步提到的变量)
+    4. 返回新的对象
