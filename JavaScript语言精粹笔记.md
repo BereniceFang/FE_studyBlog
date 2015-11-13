@@ -29,7 +29,7 @@ MyApp.a = {}
 MyApp.b = {}
 ```
 
--------
+
 
 # 函数
 
@@ -107,7 +107,7 @@ var memoizer = function(memo, formula){
 }
 ```
 
--------
+
 
 # 继承
 
@@ -146,7 +146,7 @@ function(o){
     4. 返回新的对象
 * 可以通过部件组装对象
 
-------
+
 
 # 数组
 
@@ -163,5 +163,5 @@ function(o){
 * 因为数组是对象, 所以可以用for in来遍历一个数组的所有属性, 不过无法保证属性的顺序也有可能得到原型链的属性, 所以可以用for语句来枚举
 * 如何区分数组和对象
   * `typeof`检测数组返回object
-  * `Object.prototype.toString.apply()` 可以检测出分别
+  * 
 
