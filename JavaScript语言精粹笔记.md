@@ -163,5 +163,14 @@ function(o){
 * 因为数组是对象, 所以可以用for in来遍历一个数组的所有属性, 不过无法保证属性的顺序也有可能得到原型链的属性, 所以可以用for语句来枚举
 * 如何区分数组和对象
   * `typeof`检测数组返回object
-  * 
+  * `Object.prototype.toString.apply()`可以检测出
+* 数组可以通过Array.prototype来扩充方法, 这样每个数组都可以继承这个方法
+* 如果不给初始值, 则为undefined
+
+
+
+# 正则表达式
+
+* 
+
 
