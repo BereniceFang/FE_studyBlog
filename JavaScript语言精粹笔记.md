@@ -215,18 +215,77 @@ function(o){
   * `number.toPrecision()`把number转换为一个十进制形式的字符串, 参数可控制数字精度, 0~21位之间
   * `number.toString()`把number转换为字符串, 根据参数确定进制, 参数在2~36之间
 * Object
+  * `object.hasOwnProperty()`如果object包含名为参数的这个属性, 则返回true, 原型链中的同名属性不会被检测
+* RegExp
+  * `regexp.exec()`功能强大但是慢, 成功匹配regexp, 返回一个数组, 下标为0的是匹配的子字符串, 为1的是分组1捕获的文本, 以此类推, 匹配失败会返回null
+  * `regexp.test()`简单但是快, 匹配上返回true, 失败为false, 不能用g标识
+* String
+  * `string.charAt()`返回参数位置处的字符, 参数小于0或大于字符串长度会返回空字符串
+  * `string.charCodeAt()`和charAt相似, 只是返回的为整数形式字符码位, 小于0或大于字符串长度会返回NaN
+  * `string.concat()`字符串拼接, 但是常用+来替代concat
+  * `string.indexOf()`第一个参数为在字符串中需要匹配的部分, 第二个参数可选, 设置起始位置, 找到返回第一个字符的位置, 找不到返回-1
+  * `string.lastIndexOf()`与indexOf相似,从字符串末尾开始查找
+  * `string.localeCompare()`比较两个字符串
+  * `string.match()`和正则表达式匹配, 依据g标识符, 没有g时与`regexp.exec()`结果相同, 有g时返回包含所有匹配的数组
+  * `string.replace()`对字符串查找并替换, 第一个参数可以是字符串或者是一个正则, 如果是字符串只会在第一次出现的地方被替换
+  * `string.search()`与indexOf类似, 接受一个正则作为参数, 找到匹配则返回第一个匹配的首字符位置, 没有则返回-1, 忽略g标识而且不支持选择开始匹配的位置
+  * `string.slice(start, end)`复制一部分构造新的字符串, start如果为负的,将与length相加, end参数可选, 如果为负数也要加上length
+  * `string.split()`可以把字符串按照第一个参数中的标识来分割成片段创建字符串数组
+  * `string.substring()`与slice类似, 只是不能处理参数是负数的情况, 尽量用slice代替substring
+  * `string.toLocaleLowerCase()`返回新的字符串, 用本地化规则把字母转化为小写格式
+  * `string.toLocaleUpperCase()`返回新的字符串, 用本地化规则把字母转化为大写格式
+  * `string.toLowerCase()`返回新的字符串, 把字母转化为小写格式
+  * `string.toUpperCase()`返回新的字符串, 把字母转化为大写格式
+  * `string.fromCharCode()`根据传入的数字编码返回字符串
 
 
 
+# 代码风格
+
+* if和while这类结构化语句, 使用代码块会降低出错概率
+* 把{放在一行的结尾而不是下一行的开头
+* 写注释可以便于他人阅读时理解代码的思路
+* 谨慎使用全局变量
 
 
 
+# 问题特性
 
-
-
-
-
-
+* 全局变量
+  * 声明全局变量的方式
+    * 在任何函数之外`var a`
+    * 直接给全局对象添加属性`window.a`
+    * 在函数里不用var, 隐式的全局变量
+  * 全局变量可以被程序的任何部分在任意时间修改, 难以管理
+* 作用域
+  * 没有块级作用域
+* 自动插入分号
+* 与其他语言不同的保留字
+* Unicode把一对字符视为单一字符, js认为是两个不同的字符
+* typeof 
+  * 不能区分null和对象
+  * 判断正则表达式时返回的为对象
+* parseInt
+  * 把字符串转换为整数, 遇到非数字时停止解析
+  * 建议加上第二个参数, 也就是说明进制
+* +
+  * 加法运算或者字符串连接
+  * 如果有一个是字符串则转为字符串, 都为数字才会做加法
+* 浮点数
+  * 浮点数运算不准确, 通过指定精度来尽量避免
+* NaN
+  * 与自身不等
+  * 通过`isNaN()`判断
+* 伪数组
+  * 没有真正的数组, 不会越界, 不需要设置维度, 但是性能差于真正的数组
+  * typeof 不能辨别数组和对象, 可以通过`Object.prototype.toString.apply()`判断
+  * arguments不是一个数组, 是有这length属性的对象
+* 假值
+  * 0 NaN '' false null undefined 等同于假
+* hasOwnProperty
+  * 这是一个方法而不是属性, 可能会被替换掉
+* 对象
+  * 对象不会是真正的空对象, 因为他们可以从原型链中取得成员属性
 
 
 
