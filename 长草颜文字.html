@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>长草颜文字</title>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  .head{
+    position: relative;
+    width: 440px;
+    height: 410px;
+    margin: 90px auto;
+  }
+  .face{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #783723;
+    border-radius: 48% 49% 48% 47%;
+  }
+  .eyes>div{
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    z-index: 10;
+    top: 180px;
+    background-color: #783723;
+    border-radius: 46px;
+  }
+  .eyes>div:after{
+    content: '';
+    width: 36px;
+    height: 8px;
+    position: absolute;
+    border-radius: 99px;
+    background-color: #783723;
+  }
+  .eye-left{
+    left: 110px;
+    width: 44px;
+  }
+  .eye-left:after{
+    transform: rotate(20deg);
+    top: -18px;
+    left: 8px;
+  }
+  .eye-right{
+    left: 270px;
+    top: 176px;
+  }
+  .eye-right:after{
+    transform: rotate(-30deg);
+    left: -2px;
+    top: -16px;
+    width: 34px;
+  }
+  .grass{
+    position: absolute;
+    left: 70px;
+    top: 5px;
+    z-index: 1;
+    transform: rotate(-43deg);
+  }
+  .grass:after,.grass:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    background-color: #83d456;
+    border: 8px solid #844728;
+    border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
+  }
+  .grass:after{
+    width: 55px;
+    height: 45px;
+    transform: rotate(140deg);
+    top: -75px;
+    left:-33px;
+  }
+  .grass:before{
+    width: 50px;
+    height: 48px;
+    transform: rotate(60deg);
+    top: -45px;
+    left: -80px;
+  }
+  .grass-inner{
+    width: 50px;
+    height: 70px;
+    border:10px solid #844728;
+    border-radius: 0 100% 0 0;
+    border-bottom-width: 0;
+    border-top-width: 8px;
+    border-left-width: 0;
+    position: absolute;
+    top: -20px;
+    left: -33px;
+  }
+  .nose {
+    position: absolute;
+    width: 100px;
+    top: 185px;
+    left: 170px;
+    font-size: 0; 
+  }
+  .nose:after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    top: -16px;
+    transform: rotate(2deg);
+    border-radius: 50%; 
+  }
+  .nose > div {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #723a21;
+    border-radius: 999px;
+    display: inline-block;
+    position: relative; 
+  }
+  .nose > div:after, .nose > div:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 30;
+    width: 10px;
+    height: 10px;
+    border-radius: 99px;
+    background-color: #723a21; 
+  }
+  .nose .nose-left {
+    margin-right: -10px; 
+  }
+  .nose .nose-left:after {
+    left: -6px;
+    top: -2px; 
+  }
+  .nose .nose-left:before {
+    left: 30px;
+    top: 9px; 
+  }
+  .nose .nose-right:after {
+    content: none; 
+  }
+  .nose .nose-right:before {
+    left: 30px;
+    top: 6px; 
+  }
+  .cheek:after,.cheek:before{
+    content: '';
+    position: absolute;
+    top: 230px;
+    left: 80px;
+    width: 45px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fdc9b1;
+    transform: rotate(2deg);
+  }
+  .cheek:after{
+    margin-left: 230px;
+    margin-top: 3px;
+    width: 48px;
+    height: 30px;
+    transform: rotate(-10deg);
+  }
+</style>
+<body>
+  <div class="head">
+    <div class="grass">
+      <div class="grass-inner"></div>
+    </div>
+    <div class="face">
+      <div class="eyes">
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+      </div>
+      <div class="nose">
+        <div class="nose-left"></div>
+        <div class="nose-right"></div>
+      </div>
+    </div>
+    <div class="cheek"></div>
+  </div>
+</body>
+</html>
