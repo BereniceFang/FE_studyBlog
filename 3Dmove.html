@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D翻转练习</title>
+    <meta charset="utf-8"> 
+    <style>
+    #cardflip{
+      width: 200px;
+      height: 260px;
+      position: relative;
+      perspective: 800px;
+    }
+    #card1{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+    #card1 div{
+      width: 100%;
+      height: 100%;
+      color: white;
+      font-size: 150px;
+      text-align: center;
+      line-height: 260px;
+      font-weight: bold;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+    #card1 .front {
+      background: #e74c3c;
+    }
+    #card1 .back {
+      background: #3498db;
+      transform: rotateY( 180deg );
+    }
+    #card1.flipped {
+      transform: rotateY( 180deg );
+    }
+    </style>
+    <style>
+      #cardflip2{
+        width: 200px;
+        height: 260px;
+        position: relative;
+        perspective: 800px;
+      }
+      #card2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        transform-origin: left center; 
+      }
+      #card2 div{
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 150px;
+        text-align: center;
+        line-height: 260px;
+        font-weight: bold;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      #card2 .front {
+        background: #e74c3c;
+      }
+      #card2 .back {
+        background: #3498db;
+        transform: rotateY( 180deg );
+      }
+      #card2.flipped {
+        transform: translateX( 100% ) rotateY( 180deg );
+      }
+    </style>
+  </head>
+  <script src="jquery.js"></script>
+  <body>
+  <div>
+    <h1>沿Y轴3D翻转</h1>
+    <div id="cardflip2">
+      <div id="card1">
+        <div class="front">1</div>
+        <div class="back">2</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1>沿Y轴3D翻转-带偏移效果</h1>
+    <div id="cardflip">
+      <div id="card2">
+        <div class="front">1</div>
+        <div class="back">2</div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#card1 .front").on("click",function(){
+    $("#card1").addClass("flipped")
+  })
+  $("#card1 .back").on("click",function(){
+    $("#card1").removeClass("flipped")
+  })
+  //card2
+  $("#card2 .front").click(function(){
+    $("#card2").addClass("flipped")
+  })
+  $("#card2 .back").on("click",function(){
+    $("#card2").removeClass("flipped")
+  })
+  </script>
+  </body>
+</html>
