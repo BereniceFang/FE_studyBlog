@@ -27,7 +27,11 @@
     height: 125px;
     font-size: 40px;
     line-height: 125px;
+    color: #ccc;
+  }
+  .choose-date .userSelect{
     color: #fff;
+    font-size: 45px;
   }
   .hide{
     display: none;
@@ -115,13 +119,18 @@
     // 自动归位
     function autoPosition(type){
         var $tmp = $('#ul-' + type)
+        var $items = $('#ul-' + type + ' li')
+        $('#ul-' + type + ' .userSelect').removeClass('userSelect')
         if(select[type] < start[type] + length[type]){
             console.log('正常')
             $tmp.css('margin-top', (start[type] - select[type] + 1) * itemHeight)
+            console.log($tmp, select[type] - start[type])
+            $items.eq([select[type] - start[type]]).addClass('userSelect')
         }else{
             console.log('溢出')
             select[type] = start[type] + length[type] - 1
             $tmp.css('margin-top', (2 - length[type]) * itemHeight)
+            $items.eq([length[type] - 1]).addClass('userSelect')
         }
     }
 
@@ -147,9 +156,15 @@
         touchstart = e.targetTouches[0].clientY
         moveStart = parseInt($(this).css('margin-top'))
     }).on('touchmove', '.choose-date ul', function(e){
+        $('#ul-' + selectType + ' .userSelect').removeClass('userSelect')
         var tmp = e.targetTouches[0].clientY
         var moveLength = moveStart - touchstart + tmp
         if(moveLength >= (2 - length[selectType]) * itemHeight && moveLength <= itemHeight){
+          if(Math.abs(moveLength%125) > 80){
+            $('#ul-' + selectType + ' li').eq(2 - parseInt(moveLength / 125)).addClass('userSelect')
+          }else if(Math.abs(moveLength%125) < 45){
+            $('#ul-' + selectType + ' li').eq(1 - parseInt(moveLength / 125)).addClass('userSelect')
+          }
           $(this).css('margin-top', moveLength)
         }else{
           console.error('滑动越界')
@@ -159,6 +174,7 @@
         $(this).css('margin-top', moveLength)
         select[selectType] = (selectType == 'year' ? start['year'] : start['month']) - moveLength / itemHeight + 1
         console.log(select)
+        autoPosition('year')
         domSwitch(getMonthsLength(select.year), 'month')
         autoPosition('month')
         domSwitch(getDaysLength(select.year, select.month), 'day')
