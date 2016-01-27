@@ -67,6 +67,7 @@
     select.day = current.day
 
     var itemHeight = 125
+        ,hignLightRange = 30
 
     // 获取天数
     function getDaysLength(year, month) {
@@ -160,10 +161,10 @@
         var tmp = e.targetTouches[0].clientY
         var moveLength = moveStart - touchstart + tmp
         if(moveLength >= (2 - length[selectType]) * itemHeight && moveLength <= itemHeight){
-          if(Math.abs(moveLength%125) > 80){
-            $('#ul-' + selectType + ' li').eq(2 - parseInt(moveLength / 125)).addClass('userSelect')
-          }else if(Math.abs(moveLength%125) < 45){
-            $('#ul-' + selectType + ' li').eq(1 - parseInt(moveLength / 125)).addClass('userSelect')
+          if(Math.abs(moveLength%itemHeight) > itemHeight - hignLightRange){
+            $('#ul-' + selectType + ' li').eq(2 - parseInt(moveLength / itemHeight)).addClass('userSelect')
+          }else if(Math.abs(moveLength%itemHeight) < hignLightRange){
+            $('#ul-' + selectType + ' li').eq(1 - parseInt(moveLength / itemHeight)).addClass('userSelect')
           }
           $(this).css('margin-top', moveLength)
         }else{
