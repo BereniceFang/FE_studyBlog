@@ -6,14 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
 <script src="http://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
 <style type="text/css">
-body{
-  background-color: #ec6a5c;
-}
+  body{
+    background-color: #ec6a5c;
+  }
   .choose-date{
     max-width: 60%;
-    height: 240px;
+    height: 210px;
     overflow-y: hidden; 
     margin: 0 auto;
+    position: relative;
   }
   .choose-date ul{
     margin: 0;
@@ -25,11 +26,31 @@ body{
   }
   .choose-date li{
     width: 100%;
-    height: 80px;
-    font-size: 24px;
-    line-height: 80px;
-    color: #fff;
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+    color: #f6beb9;
     text-align: center;
+  }
+  .choose-date .userSelect{
+    color: #fff;
+    font-size: 24px;
+  }
+  .choose-date ul:before{
+    content: '';
+    display: inline-block;
+    border-bottom: 2px solid #cf5d51;
+    width: 30%;
+    position: absolute;
+    top: 33.3%;
+  }
+  .choose-date ul:after{
+    content: '';
+    display: inline-block;
+    border-top: 2px solid #cf5d51;
+    width:30%;
+    position: absolute;
+    bottom: 33.3%;
   }
   .hide{
     display: none;
@@ -46,8 +67,8 @@ body{
 var today = new Date()
 var current = {}
 current.year = today.getFullYear(),
-  current.month = today.getMonth() + 1,
-  current.day = today.getDate()
+current.month = today.getMonth() + 1,
+current.day = today.getDate()
 
 var start = {}
 start.year = 1900
@@ -56,14 +77,16 @@ start.day = 1
 
 var length = {}
 length.year = current.year - start.year + 1,
-  length.month = 12,
-  length.day = 31
+length.month = 12,
+length.day = 31
 
 var select = {}
 select.year = current.year,
-  select.month = current.month,
-  select.day = current.day
-var itemHeight = 80
+select.month = current.month,
+select.day = current.day
+
+var itemHeight = 70,
+    fontSize = 30
 
 
 // 获取天数
@@ -117,11 +140,15 @@ function domSwitch(len, type) {
 // 自动归位
 function autoPosition(type) {
   var $tmp = $('#ul-' + type)
-  if (select[type] < start[type] + length[type]) {
+  var $items = $('#ul-' + type + ' li')
+  $('#ul-' + type + ' .userSelect').removeClass('userSelect')
+  if(select[type] < start[type] + length[type]){
     $tmp.css('margin-top', (start[type] - select[type] + 1) * itemHeight)
-  } else {
-    select[type] = start[type] + length[type] - 1
-    $tmp.css('margin-top', (2 - length[type]) * itemHeight)
+    $items.eq([select[type] - start[type]]).addClass('userSelect')
+  }else{
+      select[type] = start[type] + length[type] - 1
+      $tmp.css('margin-top', (2 - length[type]) * itemHeight)
+      $items.eq([length[type] - 1]).addClass('userSelect')
   }
 }
 
@@ -141,24 +168,30 @@ init()
 
 var selectType
 var touchstart,
-  moveStart
+    moveStart
 $('body').on('touchstart', '.choose-date ul', function(e) {
   selectType = $(this).data('type')
   touchstart = e.targetTouches[0].clientY
   moveStart = parseInt($(this).css('margin-top'))
 }).on('touchmove', '.choose-date ul', function(e) {
   e.preventDefault()
+  $('#ul-' + selectType + ' .userSelect').removeClass('userSelect')
   var tmp = e.targetTouches[0].clientY
   var moveLength = moveStart - touchstart + tmp
   if (moveLength >= (2 - length[selectType]) * itemHeight && moveLength <= itemHeight) {
+    if(Math.abs(moveLength%itemHeight) > itemHeight - fontSize){
+      $('#ul-' + selectType + ' li').eq(2 - parseInt(moveLength / itemHeight)).addClass('userSelect')
+    }else if(Math.abs(moveLength%itemHeight) < fontSize){
+      $('#ul-' + selectType + ' li').eq(1 - parseInt(moveLength / itemHeight)).addClass('userSelect')
+    }
     $(this).css('margin-top', moveLength)
   }
 }).on('touchend', '.choose-date ul', function(e) {
-  e.preventDefault()
   var moveLength = Math.round(parseFloat($(this).css('margin-top')) / itemHeight) * itemHeight
   $(this).css('margin-top', moveLength)
   select[selectType] = (selectType == 'year' ? start['year'] : start['month']) - moveLength / itemHeight + 1
   console.log(select)
+  autoPosition('year')
   domSwitch(getMonthsLength(select.year), 'month')
   autoPosition('month')
   domSwitch(getDaysLength(select.year, select.month), 'day')
