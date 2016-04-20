@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<script type="text/javascript" src="vue.js"></script>
+<body>
+  <div id="test01">
+    <p>{{* message }}</p>
+    <input v-model="message" v-on:keyup.enter="addTodo">
+    <button v-on:click="reverseMessage">reverse</button>
+    <ul>
+      <li v-for="list in lists">
+        <span>{{message}} - {{ $index }} - {{$key}} - {{list.text}}</span>
+      </li>
+    </ul>
+    <span v-if="greeting">hello</span>
+    <button v-on:click="magic">magic</button>
+    <hello-component></hello-component>
+    <table>
+      <tr>aaa</tr>
+      <tr is='hello-component'></tr>
+    </table>
+  </div>
+</body>
+<script>
+  var MyComponent = Vue.extend({
+    template:'<div>hello, MyComponent</div>'
+  })
+  Vue.component('hello-component',MyComponent)
+  new Vue({
+    el: "#test01",
+    data: {
+      message: "Hello Vue.js!",
+      lists:[
+        {
+          text: 'aaa'
+        },{
+          text: 'bbb'
+        },{
+          text: 'ccc'
+        },{
+          text: 'ddd'
+        }
+      ],
+      greeting: false
+    },
+    methods:{
+      reverseMessage: function(){
+        this.message = this.message.split('').reverse().join('')
+      },
+      addTodo:function(){
+        var text = this.message
+        if(text){
+          this.lists.push({text:text})
+          this.message = ''
+        }
+      },
+      magic: function(){
+        this.greeting = !this.greeting
+      }
+    }
+  })
+</script>
+</html>

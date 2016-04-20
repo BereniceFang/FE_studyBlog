@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+<input id="bnt1" type="button" value="1" />
+<input id="bnt2" type="button" value="2" />
+<input id="bnt3" type="button" value="3"  />
+<input id="bnt4" type="button" value="4"  />
+<div id="tejia">
+    <div>111</div>
+    <div>222</div>
+    <div>333</div>
+    <div>444</div>
+</div>
+</body>
+<script>
+$(function(){
+    for(var i=1;i<=4;i++){
+        $("#bnt"+i).on('click',(function(n){
+            return function(){
+                $("#tejia>div").each(function(index){
+                    if(index==(n-1)) $(this).css("display","block");
+                    else $(this).css("display","none");
+                })
+            }
+        })(i));
+    }   
+})
+</script>
+</html>

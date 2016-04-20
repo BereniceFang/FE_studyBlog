@@ -14,6 +14,7 @@
     height: 210px;
     overflow-y: hidden; 
     margin: 0 auto;
+    text-align: center;
     position: relative;
   }
   .choose-date ul{
@@ -36,21 +37,25 @@
     color: #fff;
     font-size: 24px;
   }
-  .choose-date ul:before{
+  #ul-year:before,#ul-month:before,#ul-day:before,#ul-year:after,#ul-month:after,#ul-day:after{
     content: '';
     display: inline-block;
     border-bottom: 2px solid #cf5d51;
-    width: 30%;
+    width: 29%;
     position: absolute;
     top: 33.3%;
   }
-  .choose-date ul:after{
-    content: '';
-    display: inline-block;
-    border-top: 2px solid #cf5d51;
-    width:30%;
-    position: absolute;
-    bottom: 33.3%;
+  #ul-year:after,#ul-month:after,#ul-day:after{
+    top: 66.6%;
+  }
+  #ul-year:before,#ul-year:after{
+    left: 3%;
+  }
+  #ul-month:before,#ul-month:after{
+    left: 35%;
+  }
+  #ul-day:before,#ul-day:after{
+    left: 66.6%;
   }
   .hide{
     display: none;
@@ -69,6 +74,7 @@ var current = {}
 current.year = today.getFullYear(),
 current.month = today.getMonth() + 1,
 current.day = today.getDate()
+var initYear = current.year - 15
 
 var start = {}
 start.year = 1900
@@ -152,15 +158,24 @@ function autoPosition(type) {
   }
 }
 
+function initYears(){
+  var $tmp = $('#ul-year')
+  var $items = $('#ul-year li')
+  $('#ul-year .userSelect').removeClass('userSelect')
+  $tmp.css('margin-top', (1900 - initYear + 1) * itemHeight)
+  $items.eq([initYear - 1900]).addClass('userSelect')
+}
+
 // 初始化
 function init() {
   initDom('year')
   initDom('month')
   initDom('day')
   autoPosition('year')
-  domSwitch(getMonthsLength(current.year), 'month')
+  initYears()
+  domSwitch(getMonthsLength(initYear), 'month')
   autoPosition('month')
-  domSwitch(getDaysLength(current.year, current.month), 'day')
+  domSwitch(getDaysLength(initYear, current.month), 'day')
   autoPosition('day')
 }
 

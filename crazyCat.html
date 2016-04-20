@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crazy Cat</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<style type="text/css">
+html{
+　　text-size-adjust:none;
+}
+.odd{
+	height: 40px;
+	font-size:0;
+}
+.even{
+	height: 40px;
+	font-size:0;
+	text-indent: 20px;
+}
+.elements{
+	width: 40px; 
+	height: 40px; 
+	display: inline-block;
+	background-color: #ccc; 
+	border-radius: 20px;
+}
+.checked{
+	background-color: #f60;
+}
+</style>
+<script type="text/javascript">
+	var a = new Array( [0,0,0,0,0,0,0,0,1]
+						,[0,0,0,0,0,0,0,1,0]
+						,[0,0,0,0,0,0,1,0,0]
+						,[0,0,0,0,0,1,0,0,0]
+						,[0,0,0,0,1,0,0,0,0]
+						,[0,0,0,1,0,0,0,0,0]
+						,[0,0,1,0,0,0,0,0,0]
+						,[0,1,0,0,0,0,0,0,0]
+						,[1,0,0,0,0,0,0,0,0])
+	$(function(){
+		$(".elements").each(function(index, element){
+			
+			console.log(a[index/9][index%9])
+		})
+	})
+	
+</script>
+<body>
+	<div>
+		<div class="odd">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="even">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="odd">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="even">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="odd">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="even">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="odd">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="even">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+		<div class="odd">
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+			<span class="elements"></span>
+		</div>
+	</div>
+</body>
+</html>

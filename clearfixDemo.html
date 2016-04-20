@@ -1,0 +1,42 @@
+<html>
+  <head></head>
+  <style>
+    /*.clearfix:after{
+      content:".";
+      display:block;
+      height:0;
+      clear:both;
+      visibility:hidden
+    }*/
+    .clearfix{
+      clear:both;
+    }
+    
+    .fl{
+      float: left;
+      display: inline;
+    }
+    .a{
+      border: 1px solid #000;
+      width: 60px;
+      height: 60px;
+      float: left;
+    }
+    .b{
+      border: 1px solid #000;
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+  <body>
+    <div class="a">
+    1
+    </div>
+    <div class="a clearfix">
+    2
+    </div>
+    <div class="a">
+    3
+    </div>
+  </body>
+</html>
