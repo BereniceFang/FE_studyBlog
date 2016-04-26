@@ -152,3 +152,11 @@
     * `opacity: 0;`
     * `display: none;`
     * `position: absolute; left: -1000;`
+25. overflow:auto页面滚动条出现时不跳动
+    * `calc`是CSS3中的计算，IE10+浏览器支持
+    * `100vw`相对于浏览器的`window.innerWidth`, 是浏览器的内部宽度, 滚动条宽度也计算在内, 而100%是可用宽度, 是不含滚动条的宽度
+    * `
+        .wrap-outer {
+            margin-left: calc(100vw - 100%);
+        }
+      `
