@@ -55,7 +55,7 @@
 
   /*第二页*/
   .blue{
-    background-color: #2146b8;
+    background-color: #3767fd;
   }
   .blueimg{
     width: 40%;
@@ -75,6 +75,44 @@
     top: 40%;
     left: 55%;
     animation-iteration-count: infinite;
+  }
+
+  /*第三页*/
+  .purple{
+    background-color: #be9beb;
+  }
+  .purpleimg{
+    position: absolute;
+    bottom: 3%;
+    right: 0;
+  }
+  .tennisman{
+    width: 100%;
+  }
+  .boll{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    animation-iteration-count: infinite;
+  }
+  /*第四页*/
+  .swim{
+    background-color: #1aa6fe;
+  }
+  .swimimg{
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+  }
+  .water{
+    position: absolute;
+    top: 0%;
+    animation-iteration-count: infinite;
+  }
+  /*第五页*/
+  .synchronised{
+    background-image: url(synchronisedbg.png);
+    background-size: 100% 100%;
   }
 </style>
 <body>
@@ -97,8 +135,25 @@
           <img src="arrow.png" class="ani arrow" swiper-animate-effect="fadeOutRight" swiper-animate-duration="1s">
         </div>
       </div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>    
+      <div class="swiper-slide purple" data-hash="slide3">
+        <div class="purpleimg">
+          <img src="tennisman.png" class="ani tennisman" swiper-animate-effect="fadeInLeft">
+          <img src="boll.png" class="ani boll" swiper-animate-effect="tada" swiper-animate-duration="2s" swiper-animate-delay="0.5s">
+        </div>
+      </div>
+      <div class="swiper-slide swim" data-hash="slide4">
+        <div class="swimimg" >
+          <img src="swimman.png" class="ani swimman" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s">
+          <img src="water1.png" class="ani water" swiper-animate-effect="zoomInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+          <img src="water2.png" class="ani water" swiper-animate-effect="zoomInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+          <img src="water3.png" class="ani water" swiper-animate-effect="zoomInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+          <img src="water4.png" class="ani water" swiper-animate-effect="zoomInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+        </div>
+      </div>
+      <div class="swiper-slide synchronised" data-hash="slide5">
+        <div></div>
+      </div>
+    </div> 
   </div>
 <script src="swiper-3.3.1.min.js"></script>
 <script src="swiper.animate.min.js"></script>
