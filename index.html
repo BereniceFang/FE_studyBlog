@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>精彩奥运，你我相约！</title>
+    <link rel="stylesheet" href="lib/swiper.min.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a2a6fdf629d808fc2b59f0.css' rel='stylesheet' type='text/css' />
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a1a157f629d808fc2b5933.css' rel='stylesheet' type='text/css' />
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a1af0cf629d808fc2b595e.css' rel='stylesheet' type='text/css' />
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a1a20af629d808fc2b5936.css' rel='stylesheet' type='text/css' />
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a1a26bf629d808fc2b5938.css' rel='stylesheet' type='text/css' />
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/27697/19516/57a192c7f629d808fc2b58d9.css' rel='stylesheet' type='text/css' />
+    <meta charset="utf-8">
+    <meta content="user-scalable=0;" name="viewport"/>
+</head>
+<style>
+  p{
+    margin: 5% 0 0;
+  }
+  .tit{
+    font-size: 120px;
+  }
+  .intro{
+    width: 90%;
+    font-size:48px; 
+    line-height:60px;
+    margin: 4% 0;
+    margin-left: 5%; 
+    z-index: 1;
+  }
+  .sectit{
+    font-size: 80px;
+    line-height: 90px;
+  }
+  .seccontent{
+    font-size: 50px;
+  }
+  .contentarea{
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 3%;
+    z-index: 1;
+  }
+  .area2{
+    margin-top: 5%;
+    margin-left: 18%;
+    text-align: right;
+  }
+  body{
+    margin: 0;
+    font-family:'minijiandieyu4f885956b6c31';
+  }
+  img{
+    display: inline-block;
+  }
+  .index{
+    background-color: #fea86b;
+  }
+  #music{
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  .musicbtn{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 35px;
+    background-color: #5c3e0f;
+    opacity: 0.7;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .riologo{
+    width: 50%;
+    margin: 3%;
+    margin-left: 25%;
+  }
+  .riocartoon{
+    width: 50%;
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+  }
+  .indextit{
+    text-align: center;
+    font-size: 80px;
+    color: #f66600;
+    margin: 10% 0;
+    margin-left: 10%; 
+    z-index: 1;
+  }
+  .indextext{
+    font-size: 50px;
+    text-align: center;
+    color: #f66600;
+    width: 52%;
+    margin: 0;
+    margin-left: 39%;
+    z-index: 1;
+  }
+
+  /*adintro1*/
+  .adintro{
+    background-color: #fe9;
+    color: #5c3e0f;
+    font-family:'minijiandieyu4f885956b6c31';
+  }
+  .adintrocloud1{
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 30%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .adintrocloud2{
+    width: 90%;
+    margin-top: 44%;
+    margin-left: 5%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .miintroarrow{
+    width: 150%;
+    height: 20%;
+    transform:rotate(-60deg);
+    -webkit-transform:rotate(-60deg);
+    position: absolute;
+    top: 33%;
+    right: -28%;
+  }
+  .miintro{
+    width: 50%;
+    height: 11%;
+    padding: 3%;
+    position: absolute;
+    border-radius: 15px;
+    background-color: #fb0;
+    opacity: 0.9;
+    text-align: center;
+  }
+  .miintro1{
+    left: 3%;
+    bottom: 15%;
+    font-size: 50px;
+  }
+  .miintro2{
+    left: 18%;
+    bottom: 30%;
+    font-size: 40px;
+  }
+  .miintro3{
+    left: 30%;
+    bottom: 45%;
+    font-size: 36px;
+  }
+  .miintro4{
+    left: 42%;
+    bottom: 60%;
+    font-size: 33px;
+  }
+
+  /*adintro2*/
+  .adintroround{
+    background-image: url(img/adintroround.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 600px;
+    margin: 30% 0 0 20%;
+    position: relative;
+  }
+  .adlittlecircle{
+    width: 120%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+  }
+  .adcircle{
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  .adintrorio{
+    width: 40%;
+    margin-top: 15%;
+    margin-left: 55%;
+  }
+  /*media1*/
+  .media{
+    background-color: #589343;
+    color: #2a432a;
+    font-family:'minijiandieyu4f48784fb6c31';
+  }
+  .roof{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .moon{
+    width: 20%;
+    margin: 10% 3%;
+  }
+  .man{
+    width: 34%;
+    position: absolute;
+    bottom: -2%;
+    left: 33%;
+    opacity: 0.7;
+  }
+  .cloud{
+    position: absolute;
+    width: 90%;
+    bottom: 5%;
+    left: 5%;
+    opacity: 0.5;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .media1tit{
+    width: 50%;
+    margin-left: 50%;
+    margin-top: -10%;
+  }
+  .media1text{
+    width: 50%;
+    position: absolute;
+    top:25%;
+    left: 20%;
+  }
+
+  /*media2*/
+  .gabbystar{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .gabbycloud{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -15%;
+    z-index: 1;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .gabbywoman{
+    width: 90%;
+    margin-left: 7%;
+    margin-top: -5%;
+  }
+
+ 
+  /*platform1*/
+  .platform{
+    color: #5a3463;
+    background-color: #be9beb;
+    font-family:'minijiandieyu4f4bd113c6c31';
+  }
+  .purpleimg{
+    width: 95%;
+    position: absolute;
+    bottom: 3%;
+    right: 0;
+    transform:rotate(15deg);
+    -webkit-transform:rotate(15deg);
+  }
+  .tennisman{
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .boll{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .platform1tit{
+    width: 60%;
+    margin: 15% 3% 10%;
+  }
+  .slide3text{
+    width: 65%;
+    margin-left: 25%;
+  }
+
+  /*platform2*/
+  .champion{
+    width: 65%;
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+  }
+  .takephoto{
+    width: 40%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+  .camera{
+    width: 10%;
+    position: absolute;
+    right: 36%;
+    bottom: 22%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+   /*data1*/
+  .data{
+    background-color: #1aa6fe;
+    color: #1a175f;
+    font-family:'minijiandieyu4f48a40df6c31';
+  }
+  .blueimg{
+    width: 40%;
+    transform:rotate(3deg);
+    -webkit-transform:rotate(3deg);
+  }
+  .arrowman{
+    margin: 5% 1%;
+  }
+  .angel{
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .arrow{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+  }
+  .data1tit{
+    width: 60%;
+    margin: 10% 5%;
+  }
+  .slide2text{
+    width: 60%;
+    margin-left: 30%;
+  }
+
+  /*data2*/
+  .data{
+    background-color: #1aa6fe;
+  }
+  .swimimg{
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+    right: 0%;
+    transform:rotate(-35deg);
+    -webkit-transform:rotate(-35deg);
+  }
+  .swimman{
+    width: 100%;
+    margin-left: 6%;
+  }
+  .water{
+    width: 15%;
+    position: absolute;
+    top: 4%;
+    left: 0;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .slide4tit{
+    width: 60%;
+    margin: 20% 3%;
+  }
+  .slide4text{
+    width: 60%;
+    margin-left: 35%;
+    z-index: 1;
+  }
+  /*alliance1*/
+  .alliance1{
+    background-image: url(img/synchronisedbg.png);
+    background-size: 100% 100%;
+    color: #5d074e;
+    font-family:'minijiandieyu4f48bba9e6c31';
+  }
+  .synchronisedimg{
+    position: absolute;
+    top: 39%;
+    left: 12%;
+    opacity: 0.9;
+  }
+  .synchronisedline{
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    left: 0
+  }
+  .synchronisedwomanwater1, .synchronisedwomanwater2{
+    position: absolute;
+    top: 40%;
+  }
+  .synchronisedwomanwater1{
+    width: 30%;
+    left: 8%;
+    top: 33%;
+  }
+  .synchronisedwomanwater2{
+    width: 30%;
+    left: 63%;
+    top: 38%;
+  }
+  .alliance1tit{
+    width: 60%;
+    margin: 15% 3% 5% 3%;
+  }
+  .slide5text{
+    width: 40%;
+    margin-left: 45%;
+  }
+  
+  /*alliance2*/
+  .alliance2{
+    background-color: #ab4483;
+    color: #5d074e;
+    font-family:'minijiandieyu4f48bba9e6c31';
+  }
+  .ruolinwater{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .ruolinrain{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .ruolin{
+    width: 40%;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+  }
+  
+
+  /*ads*/
+  .last{
+    background-color: #000;
+    font-family:'minijiandieyu4f44ea53a6c31';
+  }
+  .lastpic{
+    width: 80%;
+    margin: 20% auto 5%;
+  }
+  .photo{
+    width: 100%;
+  }
+  .lasttit{
+    margin: 10% 0 3%;
+    font-size: 80px;
+    text-align: center;
+    width: 100%;
+    color: #f66600;
+  }
+  .lasttext{
+    text-align: center;
+    font-size: 60px;
+    color: #f66600;
+  }
+  .lastlogo{
+    width: 14%;
+    position: absolute;
+    bottom: 3%;
+    left: 43%;
+  }
+  .nexticon{
+    width: 6%;
+    position: absolute;
+    bottom: 2%;
+    left: 47%;
+    opacity:0.6;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+</style>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide index" data-hash="slide0">
+        <audio id="music" controls="controls" loop="loop">
+          <source src="lib/bgm.mp3" type="audio/mp3"/>
+        </audio>
+        <img src="img/riocartoon.jpg" style="width:0px; height:0px; overflow:hidden">
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <img src="img/riologo.png" class="riologo">
+        <p class="indextit">精彩奥运，你我相约！</p>
+        <p class="indextext">小米商业产品部纳贤函</p>
+        <img src="img/riocartoon.png" class="ani riocartoon" swiper-animate-effect="lightSpeedIn">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide adintro" data-hash="adintro1">
+        <p class="tit">&nbsp发展历史</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" style="right:3%;z-index:1;" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <img src="img/gabbycloud.png" class="ani adintrocloud1" swiper-animate-effect="shake" swiper-animate-duration="5s">
+        <img src="img/gabbycloud.png" class="ani adintrocloud2" swiper-animate-effect="shake" swiper-animate-duration="5s">
+        <img src="img/introarrow.png" class="ani miintroarrow"swiper-animate-effect="zoomIn" swiper-animate-duration="1s">
+        <div class="ani miintro miintro1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">2010年4月小米公司成立</div>
+        <div class="ani miintro miintro2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">2011年冬，MIUI“数据组”成立。承担起以数据驱动小米的互联网业务发展的使命</div>
+        <div class="ani miintro miintro3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s">2014年夏，“数据组”更名为“数据广告组”。以数据驱动业务发展的同时，开始MIUI广告业务探索</div>
+        <div class="ani miintro miintro4" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">2016年6月18日，在雷总建议下，“数据广告组”正式更名为“商业产品部”，全面负责手机、电视、以及小米生态链业务的商业化变现</div>
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide adintro" data-hash="adintro2">
+        <p class="tit">&nbsp团队方向</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <div class="adintroround">
+          <img src="img/adlittlecircle.png" class="ani adlittlecircle" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1s">
+          <img src="img/adcircle.png" class="ani adcircle" swiper-animate-effect="jello" swiper-animate-duration="1s" swiper-animate-delay="1s">
+        </div>
+        <img src="img/adintrorio.png" class="ani adintrorio" swiper-animate-effect="bounceIn" swiper-animate-duration="1s">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide media" data-hash="media1">
+        <img class="roof" src="img/roof.png">
+        <img class="ani moon" src="img/moon.png" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+        <a onclick="bgm()"><img src="img/musicbtn.png" style="top:10%;z-index:1;" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <img src="img/man.png" class="ani man" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.3s" swiper-animate-delay="0.5s">
+        <img src="img/mediacloud.png" class="ani cloud" swiper-animate-effect="shake" swiper-animate-duration="5s">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+        <p class="ani media1tit tit" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s">媒体方向</p>
+        <p class="ani intro" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s">负责小米商业化体系中, 媒体资源拓展与变现。横跨手机电视两大终端, 两亿设备。覆盖二十多个产品线, 四大类别：入口类（应用商店、浏览器等）、内容分发类（资讯、视频等）、基础应用类（安全中心等）、创新类（锁屏桌面等）。我们的愿景是, 走在移动互联网前沿, 为小米探索出一条高效优雅的盈利之路</p>
+      </div>
+      
+      <div class="swiper-slide platform" data-hash="platform1">
+        <p class="ani platform1tit tit" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">平台方向</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <p class="ani intro" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">负责小米商业化体系中, 品牌、效果广告投放系统, 广告交易平台的研发与运营工作, 并在部分垂直行业进行创新商业形态的孵化。利用小米在数据积累, 触达手段上的独特优势, 打造精准, 智能, 稳定, 创新的移动营销交易平台。诚邀在移动互联网广告行业具备经验与热情的研发, 产品, 运营人才踊跃加入</p>
+        <div class="purpleimg">
+          <img src="img/tennisman.png" class="ani tennisman" swiper-animate-effect="fadeInLeft">
+          <img src="img/boll.png" class="ani boll" swiper-animate-effect="bounceOutLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
+        </div>
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide data" data-hash="data1">
+        <div class="blueimg">
+          <img src="img/angel.png" class="ani angel" swiper-animate-effect="flash" swiper-animate-duration="3s">
+          <img src="img/arrowman.png" class="arrowman">
+          <img src="img/arrow.png" class="ani arrow" swiper-animate-effect="bounceOutRight" swiper-animate-duration="1s">
+        </div>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <p class="ani data1tit tit" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">数据方向</p>
+        <p class="ani intro" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">负责小米商业化体系中, 小米生态数据资产的整合与商业化的工作。数据组工作两大方向为数据管理平台（DMP）和小米统计。前者为商业产品提供数据服务, 为广告主提供基于数据管理的营销解决方案。后者为MIUI以及小米生态中的开发者提供高品质的数据分析和数据营销服务</p>
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide alliance1" data-hash="alliance1">
+        <div class="synchronisedimg">
+          <img src="img/synchronisedwoman.png" class="ani synchronisedwoman" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s">
+          <img src="img/synchronisedwater1.png" class="ani synchronisedwomanwater1" swiper-animate-effect="zoomInUp" swiper-animate-duration="2s">
+          <img src="img/synchronisedwater2.png" class="ani synchronisedwomanwater2" class="ani synchronisedwomanwater1" swiper-animate-effect="zoomInUp" swiper-animate-duration="2s">
+        </div>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <img src="img/synchronisedline.png" class="ani synchronisedline">
+        <p class="ani alliance1tit tit" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s">联盟方向</p>
+        <p class="ani intro" swiper-animate-effect="zoomInRight" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s">负责小米商业化体系中, 移动网盟业务。整合了优质的合作媒体、自有媒体、以及小米手机和生态链企业的十亿级流量资源。依托于两亿+用户量的实时大数据, 满足广告主对目标受众覆盖和精准推广效果的需求, 并以此构建一个具备强大流量变现能力的小米广告移动联盟生态</p>
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide media" data-hash="media2">
+        <img src="img/gabbystar.png" class="ani gabbystar" swiper-animate-effect="flash" swiper-animate-duration="1.5s">
+        <img src="img/gabby.png" class="ani gabbywoman" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s">
+        <img src="img/gabbycloud.png" class="ani gabbycloud" swiper-animate-effect="shake" swiper-animate-duration="5s">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+        <p class="ani tit" style="margin:0;" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s" swiper-animate-delay="0.3s">职位介绍-产品</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <div class="contentarea" style="width:85%;">
+          <p class="sectit ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">数据产品经理</p>
+          <p class="seccontent ani" style="width:100%;line-height: 80px;margin-top:1%;" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">对数据敏感, 对商业充满好奇心; 在严谨的数据科学中, 寻找艺术的闪光</p>
+        </div>
+        <div class="contentarea area2" style="width:90%;">
+          <p class="sectit ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s" style="margin-right:12%;">联盟产品经理</p>
+          <p class="seccontent ani" style="line-height:80px;margin-right:12%;margin-top:1%;" swiper-animate-effect="zoomInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">移动变现产品的管理和创新, 提升流量变现能力基于米盟业务策略, 灵活推进产品迭代</p>
+        </div>
+      </div>
+      <div class="swiper-slide platform" data-hash="platform2">
+        <img src="img/champion.png" class="ani champion" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s">
+        <img src="img/takephoto.png" class="ani takephoto">
+        <img src="img/camera.png" class="ani camera"s swiper-animate-effect="flash" swiper-animate-duration="1s" swiper-animate-delay="1s">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+        <p class="ani tit" style="margin:3% 0 0;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s">职位介绍-产品</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <div class="contentarea">
+          <p class="sectit ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">商业产品经理</p>
+          <p class="seccontent ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">创新产品形态与盈利模式</p>
+          <p class="seccontent ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">平衡用户体验与商业利益</p>
+        </div>
+        <div class="contentarea area2">
+          <p class="sectit ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">平台策略产品经理</p>
+          <p class="seccontent ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">结合平台收益及广告主诉求</p>
+          <p class="seccontent ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">设计迭代投放策略及智能工具策略</p>
+        </div>
+      </div>
+      <div class="swiper-slide data" data-hash="data2">
+        <div class="swimimg">
+          <img src="img/swimman.png" class="ani swimman" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s">
+          <img src="img/datawater.png" class="ani water" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s" swiper-animate-delay="0.5s">
+        </div>
+        <p class="ani tit" style="margin:3% 0 0;" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s">职位介绍-研发</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <div class="contentarea">
+          <p class="sectit ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">服务端工程师</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">挑战可靠的高并发系统</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">实现微服务化的架构演化(Java)</p>
+        </div>
+        <div class="contentarea area2">
+          <p class="sectit ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">Web工程师</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">广告投放系统, 小米统计平台</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">客户关系管理, 营销优化工具</p>
+        </div>
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+      </div>
+      <div class="swiper-slide alliance2" data-hash="alliance2">
+        <img src="img/ruolinrain.png" class="ani ruolinrain" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s">
+        <img src="img/ruolin.png" class="ani ruolin" swiper-animate-effect="fadeInDown" swiper-animate-duration="2s" swiper-animate-delay="0.5s">
+        <img src="img/ruolinwater.png" class="ruolinwater">
+        <img src="img/nexticon.png" class="ani nexticon" swiper-animate-effect="bounce">
+        <p class="ani tit" style="margin:3% 0 0;" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s">职位介绍-研发</p>
+        <a onclick="bgm()"><img src="img/musicbtn.png" class="ani musicbtn" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"></a>
+        <div class="contentarea">
+          <p class="sectit ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s">算法工程师</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s">点击率预估, 推荐算法</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s">智能出价, 转化归因分析</p>
+        </div>
+        <div class="contentarea area2">
+          <p class="sectit ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s">大数据工程师</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s">小米统计, 数据分析, 移动洞察</p>
+          <p class="seccontent ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s">用户画像, 营销数据管理平台(DMP)</p>
+        </div>
+      </div>
+      
+      <div class="swiper-slide last" data-hash="ads">
+        <!-- <div class="lasttit">
+          <img src="img/lasthead.png" class="lasthead">
+        </div> -->
+        <p class="lasttit">以梦为马、不负韶华</p>
+        <div class="lastpic">
+          <img src="img/photo.jpg" class="photo">
+        </div>
+        <div class="lastcontent">
+          <p class="lasttext">小米商业产品部期待您的加入！</p>
+          <p class="lasttext">ads@xiaomi.com</p>
+        </div>
+        <img src="img/milogo.png" class="lastlogo">
+      </div>
+    </div>
+  </div>
+<script src="lib/jquery.js"></script>
+<script src="lib/swiper-3.3.1.min.js"></script>
+<script src="lib/swiper.animate.min.js"></script>
+<script>  
+window.onload = function(){
+  var music = document.getElementById('music');
+  music.play(); 
+  var firstTouch = true; 
+  $('body').bind("touchstart",function(e){ 
+    if ( firstTouch ) { 
+      firstTouch = false; 
+      music.play();
+    }
+    else{ 
+      return; 
+    } 
+  }); 
+}
+function bgm(){
+  var music = document.getElementById("music"); 
+  if(music.paused){ 
+    music.play(); 
+  }else{ 
+    music.pause(); 
+  } 
+}
+
+var mySwiper = new Swiper ('.swiper-container', {
+  direction: 'vertical',
+  loop: false,
+  hashnav:true,
+  // freeMode: true,
+  width : window.innerWidth,
+  height : window.innerHeight,
+  scrollbar: null,
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+})      
+
+</script>
+</body>
+</html>
