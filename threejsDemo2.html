@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>threejsDemo2</title>
+    <script src="lib/three.js"></script>
+  </head>
+  <body>
+    <canvas id="mainCanvas" width="400px" height="300px" ></canvas>
+  </body>
+  <script>
+    var renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById('mainCanvas')
+    })
+    renderer.setClearColor(0x000000)
+    var scene = new THREE.Scene()
+    var camera = new THREE.OrthographicCamera(-2, 2, 1.5, -1.5, 1, 10)//正交投影
+    camera.position.set(4, -3, 5) //设置camera位置
+    camera.lookAt(new THREE.Vector3(0, 0, 0)) //指定camera看向原点位置
+    scene.add(camera)
+    var cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1), new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        wireframe: true //空心
+      })
+    )
+    scene.add(cube)
+    renderer.render(scene, camera)
+  </script>
+</html>
