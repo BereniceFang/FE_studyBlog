@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+}
+body .header {
+  width: 100%;
+  height: 90px;
+  background-color: #292f37;
+  color: #fff;
+  vertical-align: top;
+  position: relative;
+}
+body .header .mi-logo {
+  margin-top: 22px;
+  margin-left: 20px;
+}
+body .header .header-nav {
+  display: inline-block;
+  list-style: none;
+  margin-left: 4%;
+  padding: 0;
+  width: 60%;
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  margin-top: 34px;
+  vertical-align: top;
+}
+body .header .header-nav li {
+  display: inline-block;
+  margin-right: 3%;
+}
+body .header .header-nav li .nav-logo {
+  margin-right: 8px;
+  vertical-align: top;
+}
+body .header .header-userInfo {
+  width: 10%;
+  height: 100%;
+  min-width: 120px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #354557;
+  margin-right: 10px;
+}
+body .header .header-userInfo span {
+  display: inline-block;
+  margin-top: 32px;
+  line-height: 22px;
+  height: 22px;
+  vertical-align: top;
+  max-width: 67px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body .header .header-userInfo .header-userInfo-logo {
+  margin: 32px 8px 0 20px;
+}
+body .box {
+  padding: 8px 30px 30px 40px;
+}
+body .box:nth-child(odd) {
+  background-color: #fff;
+}
+body .box:nth-child(even) {
+  background-color: #f7f7f7;
+}
+body .box .content-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 64px;
+}
+body .box .content-box {
+  padding: 5px;
+  vertical-align: top;
+}
+body .box .content-box .card {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  width: 20%;
+  min-width: 350px;
+  display: inline-block;
+  border: 1px solid #dbdbdb;
+  margin-right: 20px;
+  vertical-align: top;
+}
+body .box .content-box .card:last-child {
+  margin-right: 0;
+}
+body .box .content-box .card .card-title {
+  border-bottom: 1px dashed #e5e5e5;
+  font-size: 18px;
+  line-height: 38px;
+  color: #333;
+}
+body .box .content-box .card .card-title .card-title-logo {
+  vertical-align: middle;
+  width: 25px;
+  margin-right: 10px;
+}
+body .box .content-box .card .card-title .card-trend-logo {
+  margin-right: 10px;
+}
+body .box .content-box .card .card-content {
+  padding: 10px;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+}
+body .box .content-box .card .card-content .card-content-yestdrday {
+  font-size: 28px;
+  line-height: 44px;
+  color: #666;
+  margin-top: 10px;
+  display: block;
+}
+body .box .content-box .card .card-content .card-content-today {
+  font-size: 28px;
+  line-height: 44px;
+  display: block;
+}
+body .box .content-box .card .card-content .total-logo {
+  width: 30px;
+  margin-right: 20px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+body .box .content-box .card .card-content-little {
+  padding: 10px;
+  font-size: 26px;
+  line-height: 44px;
+  text-align: left;
+}
+body .box .content-box .card .right-down {
+  float: right;
+  background-image: url('../img/icon_00down.png');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #50b432;
+  padding-top: 6px;
+  padding-left: 32px;
+}
+body .box .content-box .card .right-up {
+  float: right;
+  background-image: url('../img/icon_00up.png');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 18px;
+  color: #ff6700;
+  padding-top: 6px;
+  padding-left: 32px;
+}
+body .box .content-box .card-bar {
+  width: 60%;
+  height: 400px;
+  background-color: #fff;
+}
+body .box .content-box .card-map {
+  width: calc(40% - 52px);
+  min-width: 500px;
+  height: 400px;
+  background-color: #fff;
+}
+body .box .content-box .total {
+  height: 160px;
+  vertical-align: middle;
+  width: calc((100% - 100px)/4);
+}
+body .box .content-box .total .card-content {
+  line-height: 100px;
+}
+body .box .content-box .add {
+  height: 500px;
+  background-color: #fff;
+}
+body .box .map-box {
+  display: inline-block;
+  width: 56%;
+  min-width: 723px;
+  vertical-align: top;
+}
+body .box .map-box .map-card {
+  display: inline-block;
+  width: calc(100% - 62px);
+  height: 496px;
+  border: 1px solid #dbdbdb;
+  vertical-align: top;
+  background-color: #fff;
+  margin-left: -5px;
+}
+body .box .map-box .map-card .tab-pane {
+  width: 100%;
+  height: 100%;
+}
+body .box .map-box .tab-card-box {
+  display: inline-block;
+}
+body .box .map-box .tab-card-box .card-tabs .card-tabs-ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+body .box .map-box .tab-card-box .card-tabs .card-tabs-ul li a {
+  display: inline-block;
+  width: 58px;
+  height: 88px;
+  border: 1px solid #dbdbdb;
+  padding: 16px 8px;
+  text-align: center;
+  vertical-align: middle;
+  color: #333;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #fff;
+}
+body .box .map-box .tab-card-box .card-tabs .card-tabs-ul li a:link {
+  text-decoration: none;
+  outline: 0;
+}
+body .box .map-box .tab-card-box .card-tabs .card-tabs-ul li a:focus {
+  background-color: #eee;
+}
+body .box .map-box .tab-card-box .card-tabs .card-tabs-ul li a:hover {
+  text-decoration: none;
+  background-color: #eee;
+  outline: 0;
+}
+body .box .mt_1 {
+  margin-top: -1px;
+}
+body .box .chart-dom {
+  width: 100%;
+  height: 95%;
+  margin-top: 1%;
+}

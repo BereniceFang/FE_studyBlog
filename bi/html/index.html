@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>MIUI BI</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../img/mi_logoBI.png" class="mi-logo">
+      <ul class="header-nav">
+        <li><img src="../img/i_home_01.png" class="nav-logo">首页</li>
+        <li><img src="../img/i_miui_01.png" class="nav-logo">MIUI统计</li>
+        <li><img src="../img/i_apply_01.png" class="nav-logo">应用统计</li>
+        <li><img src="../img/i_income_01.png" class="nav-logo">收入统计</li>
+        <li><img src="../img/i_insight_01.png" class="nav-logo">Insight</li>
+      </ul>
+      <div class="header-userInfo">
+        <img src="../img/user_icon_1.png" class="header-userInfo-logo"><span>asdfasdf</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <p class="content-title">整体概览</p>
+        <div class="content-box">
+          <div class="card total">
+            <div class="card-title">
+              <img src="../img/icon_01.png" class="card-title-logo">
+              日新增
+              <span class="right-down">2.33%</span>
+            </div>
+            <div class="card-content">
+              <span class="card-content-yestdrday"><img src="../img/icon_01_1.png" class="total-logo">昨日：<span>195,148</span></span>
+              <span class="card-content-today"><img src="../img/icon_01_2.png" class="total-logo">今日：<span>195,148</span></span>
+            </div>
+          </div>
+          <div class="card total">
+            <div class="card-title">
+              <img src="../img/icon_02.png" class="card-title-logo">
+              日活跃
+              <span class="right-up">2.33%</span>
+            </div>
+            <div class="card-content">123,412,341,242</div>
+          </div>
+          <div class="card total">
+            <div class="card-title">
+              <img src="../img/icon_03.png" class="card-title-logo">
+              周活跃
+              <span class="right-up">2.33%</span>
+            </div>
+            <div class="card-content">123,412,341,242</div>
+          </div>
+          <div class="card total">
+            <div class="card-title">
+              <img src="../img/icon_04.png" class="card-title-logo">
+              累计激活
+              <span class="right-up">2.33%</span>
+            </div>
+            <div class="card-content">123,412,341,242</div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p class="content-title">日新增</p>
+        <div class="content-box">
+          <div class="card add">
+            <div class="card-title">
+              <img src="../img/icon_china.png" class="card-title-logo">国内机型
+            </div>
+            <div class="card-content-little">
+              1,412,341
+              <span class="right-down">2.33%</span>
+            </div>
+            <div id="china-pie" chart-type="annular-pie" data-url="../pieDemo.json" class="chart-dom"></div>
+          </div>
+          <div class="card add">
+            <div class="card-title">
+            <img src="../img/icon_global.png" class="card-title-logo">海外机型
+            </div>
+            <div class="card-content-little">
+              1,412,341
+              <span class="right-up">2.33%</span>
+            </div>
+            <div id="global-pie" chart-type="annular-pie" data-url="../pieDemo.json" class="chart-dom"></div>
+          </div>
+          <div class="map-box">
+            <div class="tab-card-box">
+              <div class="card-tabs">
+                <ul class="card-tabs-ul">
+                  <li><a href="#china" data-toggle="tab">国内新增</a></li>
+                  <li class="mt_1"><a href="#global" data-toggle="tab">全球新增</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content map-card">
+              <div class="tab-pane active" id="china">
+                <div id="china-map-new" chart-type="china-map" data-url="../chinaMapDemo.json"class="chart-dom"></div>
+              </div>
+              <div class="tab-pane" id="global">
+                global
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p class="content-title">地域渗透率</p>
+        <div class="content-box">
+          <div class="card card-bar">
+            <div id="permeability-bar" data-url="../barDemo.json" chart-type="waterfall-bar" link-dom="permeability-map" class="chart-dom"></div>
+          </div>
+          <div class="card card-map">
+            <div id="permeability-map" chart-type="china-map" data-url="../chinaMapDemo.json" class="chart-dom"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p class="content-title">实时新增</p>
+        <div class="content-box">
+          <div class="card card-bar">
+            <div id="new-line" data-url="../lineDemo.json" chart-type="area-line" class="chart-dom"></div>
+          </div>
+          <div class="card card-map">
+            <div id="new-map" data-url="../spotChinaDemo.json" chart-type="spot-china-map" class="chart-dom"></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+  <script src="../lib/jquery-1.11.1.min.js"></script>
+  <script src="../lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script src="../lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script src="../lib/jquery.validate.min.js"></script>
+  <script src="../lib/echarts.js"></script>
+  <script src="../lib/china.js"></script>
+  <script src="../lib/world.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/chart-annular-pie.js"></script>
+  <script src="../js/chart-waterfall-bar.js"></script>
+  <script src="../js/chart-area-line.js"></script>
+  <script src="../js/chart-china-map.js"></script>
+  <script src="../js/chart-spot-china-map.js"></script>
+</html>

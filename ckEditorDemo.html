@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CKEditorDemo</title>
+  <script src="lib/ckeditor.js"></script>
+  <script src="lib/config.js"></script>
+</head>
+<style>
+  #editor1{
+    color: #f69;
+    width: 500px;
+    background-color: #ccc;
+    margin: 100px auto;
+    padding: 30px;
+  }
+  #editor1 p{
+    color: #f60;
+  }
+  /*#editor2Div{
+    width: 500px;
+    margin: 100px auto;
+  }*/
+</style>
+<body>
+  <div id="editor1" contenteditable="true">
+    <span>just for test span</span>
+    <h1>Inline Editing in Action!</h1>
+    <p>The "div" element that contains this text is now editable.</p>
+  </div>
+  <!-- <div id="editor2Div">
+    <textarea name="editor2" id="editor2">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+  </div> -->
+  <script>
+    CKEDITOR.disableAutoInline = true
+    CKEDITOR.inline( 'editor1' )
+    // CKEDITOR.replace( 'editor2' )
+  </script>
+</body>
+</html>
